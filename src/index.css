@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 bg-noir text-white antialiased;
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Montserrat', 'Inter', 'Segoe UI', sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply border border-white/15 bg-white/5 backdrop-blur-md;
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 25px rgba(79, 70, 229, 0.65);
+  }
+
+  .bg-overlay {
+    background:
+      linear-gradient(180deg, rgba(5, 7, 13, 0.35) 0%, rgba(5, 7, 13, 0.95) 100%),
+      linear-gradient(120deg, rgba(59, 91, 255, 0.22), rgba(79, 70, 229, 0.16));
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out both;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.85s ease-out both;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
