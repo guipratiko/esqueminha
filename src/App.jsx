@@ -7,7 +7,9 @@ import esqueminhaLogo from '../img/esqueminha.png'
 import bannerHero from '../img/BannerHero.png'
 import onlyFlowLogo from '../img/OnlyFlow-logo.png'
 import mapaEvento from '../img/mapa.png'
-import djNoPalcoImg from '../img/BECLASSIC-26.jpg'
+import secInstImg1 from '../img/IMG_2467.JPG'
+import secInstImg2 from '../img/IMG_2468.JPG'
+import secInstImg3 from '../img/IMG_2469.JPG'
 import pistaCardImg from '../img/BannerHero.png'
 import loungeCardImg from '../img/BECLASSIC-26.jpg'
 import galeriaImg56 from '../img/BECLASSIC-56.jpg'
@@ -60,12 +62,9 @@ function App() {
   ]
 
   const lineUpDjs = [
-    { name: 'DJ NEXUS', time: '22:00', stage: 'Main Stage' },
-    { name: 'LUNA BEAT', time: '23:30', stage: 'Blue Room' },
-    { name: 'MC KAYROS', time: '01:00', stage: 'Main Stage' },
-    { name: 'VIBE CTRL', time: '02:30', stage: 'Lounge Stage' },
-    { name: 'ALICE NOVA', time: '03:30', stage: 'Main Stage' },
-    { name: 'RHYTHM B2B', time: '04:30', stage: 'After Zone' },
+    { name: 'Thauane', stage: 'Line up anunciada' },
+    { name: 'Lucas e Nathan', stage: 'Line up anunciada' },
+    { name: 'Dj Vitor Bueno', stage: 'Line up anunciada' },
   ]
 
   return (
@@ -126,18 +125,18 @@ function App() {
           </div>
           <div className="grid animate-fade-up gap-4 sm:grid-cols-2">
             <img
-              src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80"
-              alt="Publico curtindo show"
+              src={secInstImg1}
+              alt="Esqueminha"
               className={`${gridImageClass} sm:col-span-2`}
             />
             <img
-              src={djNoPalcoImg}
-              alt="DJ no palco"
+              src={secInstImg2}
+              alt="Esqueminha"
               className={gridImageClass}
             />
             <img
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=80"
-              alt="Pessoas dancando"
+              src={secInstImg3}
+              alt="Esqueminha"
               className={gridImageClass}
             />
           </div>
@@ -163,9 +162,11 @@ function App() {
               >
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cloud">{dj.stage}</p>
                 <h3 className="mt-2 text-xl font-black uppercase tracking-wide text-white">{dj.name}</h3>
-                <p className="mt-3 inline-block rounded-md bg-white/10 px-3 py-1 text-sm font-bold text-white">
-                  {dj.time}
-                </p>
+                {dj.time ? (
+                  <p className="mt-3 inline-block rounded-md bg-white/10 px-3 py-1 text-sm font-bold text-white">
+                    {dj.time}
+                  </p>
+                ) : null}
               </article>
             ))}
           </div>
@@ -215,8 +216,8 @@ function App() {
             image={pistaCardImg}
             buttonHref="https://beta.meubilhete.com.br/esqueminha"
             prices={[
-              { label: 'Feminino', value: 'R$ 50,00' },
-              { label: 'Masculino', value: 'R$ 60,00' },
+              { label: 'Feminino', value: 'R$ 60,00' },
+              { label: 'Masculino', value: 'R$ 80,00' },
             ]}
           />
           <TicketCard
