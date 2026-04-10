@@ -216,8 +216,8 @@ function App() {
             image={pistaCardImg}
             buttonHref="https://beta.meubilhete.com.br/esqueminha"
             prices={[
-              { label: 'Feminino', value: 'R$ 60,00' },
-              { label: 'Masculino', value: 'R$ 80,00' },
+              { label: 'Mulher', value: 'R$ 60,00' },
+              { label: 'Homem', value: 'R$ 95,00' },
             ]}
           />
           <TicketCard
